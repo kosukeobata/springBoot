@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Index</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<h1>ようこそ</h1>
+<p>
+    <a href="/login">ログイン</a><br />
+
+<div class="LoginCallOut js-login-call-out roaming-module roaming-top-module">
+    <div class="LoginCallOut-header">
+        <h3 class="">新規登録</h3>
+    </div>
+    <form action="/doRegister" class="LoginForm js-front-signin" method="post">
+        <div class="LoginForm-input LoginForm-accountame">
+            <input type="text" class="text-input accountame-input js-signin-email" name="accountame" placeholder="アカウント名" />
+        </div>
+
+        <div class="LoginForm-input LoginForm-username">
+            <input type="text" class="text-input email-input js-signin-email" name="email" placeholder="メールアドレス" />
+        </div>
+
+        <div class="LoginForm-input LoginForm-password">
+            <input type="password" class="text-input" name="password" placeholder="パスワード" />
+        </div>
+
+        <div class="LoginForm-rememberForgot">
+            <label>
+                <span>登録する</span>
+            </label>
+        </div>
+    </form>
+</div>
+</p>
+</body>
+</html>

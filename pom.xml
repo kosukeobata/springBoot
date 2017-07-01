@@ -26,6 +26,7 @@
 	</properties>
 
 	<dependencies>
+		<!-- data set -->
         <dependency>
             <groupId>org.dbflute</groupId>
             <artifactId>dbflute-runtime</artifactId>
@@ -37,6 +38,30 @@
             <version>5.1.42</version>
             <scope>runtime</scope>
         </dependency>
+
+		<!-- thymeleaf-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- project -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+
+		<!-- starter -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
