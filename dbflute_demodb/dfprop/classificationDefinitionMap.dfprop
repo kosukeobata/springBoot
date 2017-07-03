@@ -38,19 +38,17 @@
 #
 map:{
     # example for implicit classification
-    #; Flg = list:{
-    #    ; map:{topComment=general boolean classification for every flg-column; codeType=Number}
-    #    ; map:{code=1; name=True ; alias=Checked  ; comment=means yes; sisterCode=true}
-    #    ; map:{code=0; name=False; alias=Unchecked; comment=means no ; sisterCode=false}
-    #}
+    ; Flg = list:{
+        ; map:{topComment=general boolean classification for every flg-column; codeType=Number}
+        ; map:{code=1; name=True ; alias=Checked  ; comment=means yes; sisterCode=true}
+        ; map:{code=0; name=False; alias=Unchecked; comment=means no ; sisterCode=false}
+    }
     # example for table classification
-    #; MemberStatus = list:{
-    #    ; map:{topComment=status of member from entry to withdrawal; codeType=String}
-    #    ; map:{
-    #        ; table=MEMBER_STATUS
-    #        ; code=MEMBER_STATUS_CODE; name=MEMBER_STATUS_NAME
-    #        ; comment=DESCRIPTION; orderBy=DISPLAY_ORDER
-    #    }
-    #}
+    ; AccountStatus = list:{
+        ; map:{topComment=アカウントのステータスを表す区分値; codeType=String}
+        ; map:{code=ACT; name=Active; alias=利用可能; comment=利用可能ステータス}
+        ; map:{code=REG; name=Register; alias=登録; comment=登録ステータス}
+        ; map:{code=LFT; name=Left; alias=退会; comment=退会ステータス}
+    }
 }
 # ----------------/

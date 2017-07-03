@@ -3,4 +3,13 @@
 
 .idea
 
+.project
+
+.classpath
+
+.settings
+
+index
+
 target
+/bin/

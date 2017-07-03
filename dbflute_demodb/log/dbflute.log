@@ -1,0 +1,1105 @@
+2017-07-02 15:20:35,031 [main] INFO  (DfReplaceSchemaTask#begin():91) - +------------------------------------------+
+2017-07-02 15:20:35,036 [main] INFO  (DfReplaceSchemaTask#begin():92) - |                                          |
+2017-07-02 15:20:35,036 [main] INFO  (DfReplaceSchemaTask#begin():93) - |              ReplaceSchema               |
+2017-07-02 15:20:35,041 [main] INFO  (DfReplaceSchemaTask#begin():101) - |                                          |
+2017-07-02 15:20:35,041 [main] INFO  (DfReplaceSchemaTask#begin():102) - +------------------------------------------+
+2017-07-02 15:20:35,042 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():346) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2017-07-02 15:20:36,970 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 15:20:36,970 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 15:20:36,971 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 15:20:36,971 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 15:20:36,978 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 15:20:37,399 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 15:20:37,399 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 15:20:37,414 [main] ERROR (DfDBFluteTaskUtil#logException():150) - Look! Read the message below.
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Failed to execute DBFlute Task 'ReplaceSchema'.
+
+[Advice]
+Check the exception messages and the stack traces.
+
+[Database Product]
+MySQL 5.6.26
+
+[JDBC Driver]
+MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+* * * * * * * * * */
+org.dbflute.infra.reps.exception.DfReplaceSchemaExecuteNotAllowedException: Look! Read the message below.
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Your ReplaceSchema execution was not allowed.
+
+[Advice]
+Not found SQL files for ReplaceSchema,
+so your execution might be mistake...?
+
+[SQL Root Directory]
+playsql
+* * * * * * * * * */
+	at org.dbflute.infra.reps.DfRepsExecuteLimitter.throwReplaceSchemaExecuteNotAllowedException(DfRepsExecuteLimitter.java:76)
+	at org.dbflute.infra.reps.DfRepsExecuteLimitter.checkExecutableOrNot(DfRepsExecuteLimitter.java:60)
+	at org.dbflute.logic.replaceschema.process.DfCreateSchemaProcess.checkBeforeInitialize(DfCreateSchemaProcess.java:152)
+	at org.dbflute.logic.replaceschema.process.DfCreateSchemaProcess.execute(DfCreateSchemaProcess.java:140)
+	at org.dbflute.task.DfReplaceSchemaTask.createSchema(DfReplaceSchemaTask.java:261)
+	at org.dbflute.task.DfReplaceSchemaTask.doExecuteCoreProcess(DfReplaceSchemaTask.java:246)
+	at org.dbflute.task.DfReplaceSchemaTask.executeCoreProcess(DfReplaceSchemaTask.java:237)
+	at org.dbflute.task.DfReplaceSchemaTask.processMain(DfReplaceSchemaTask.java:230)
+	at org.dbflute.task.DfReplaceSchemaTask.doExecute(DfReplaceSchemaTask.java:157)
+	at org.dbflute.task.bs.DfAbstractTexenTask$1.callActualExecute(DfAbstractTexenTask.java:129)
+	at org.dbflute.task.bs.assistant.DfTaskBasicController.doExecute(DfTaskBasicController.java:192)
+	at org.dbflute.task.bs.assistant.DfTaskBasicController.execute(DfTaskBasicController.java:78)
+	at org.dbflute.task.bs.DfAbstractTexenTask.execute(DfAbstractTexenTask.java:151)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:288)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:105)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:357)
+	at org.apache.tools.ant.Target.performTasks(Target.java:385)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1329)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+2017-07-02 15:20:37,419 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 15:20:37,428 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m02s419ms *Abort
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
+2017-07-02 16:21:56,655 [main] INFO  (DfReplaceSchemaTask#begin():91) - +------------------------------------------+
+2017-07-02 16:21:56,659 [main] INFO  (DfReplaceSchemaTask#begin():92) - |                                          |
+2017-07-02 16:21:56,660 [main] INFO  (DfReplaceSchemaTask#begin():93) - |              ReplaceSchema               |
+2017-07-02 16:21:56,664 [main] INFO  (DfReplaceSchemaTask#begin():101) - |                                          |
+2017-07-02 16:21:56,665 [main] INFO  (DfReplaceSchemaTask#begin():102) - +------------------------------------------+
+2017-07-02 16:21:56,666 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():346) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2017-07-02 16:21:56,689 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:21:56,689 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:21:56,690 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:21:56,690 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:21:56,697 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 16:21:57,025 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 16:21:57,026 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 16:21:57,040 [main] ERROR (DfDBFluteTaskUtil#logException():150) - Look! Read the message below.
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Failed to execute DBFlute Task 'ReplaceSchema'.
+
+[Advice]
+Check the exception messages and the stack traces.
+
+[Database Product]
+MySQL 5.6.26
+
+[JDBC Driver]
+MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+* * * * * * * * * */
+org.dbflute.infra.reps.exception.DfReplaceSchemaExecuteNotAllowedException: Look! Read the message below.
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Your ReplaceSchema execution was not allowed.
+
+[Advice]
+Not found SQL files for ReplaceSchema,
+so your execution might be mistake...?
+
+[SQL Root Directory]
+playsql
+* * * * * * * * * */
+	at org.dbflute.infra.reps.DfRepsExecuteLimitter.throwReplaceSchemaExecuteNotAllowedException(DfRepsExecuteLimitter.java:76)
+	at org.dbflute.infra.reps.DfRepsExecuteLimitter.checkExecutableOrNot(DfRepsExecuteLimitter.java:60)
+	at org.dbflute.logic.replaceschema.process.DfCreateSchemaProcess.checkBeforeInitialize(DfCreateSchemaProcess.java:152)
+	at org.dbflute.logic.replaceschema.process.DfCreateSchemaProcess.execute(DfCreateSchemaProcess.java:140)
+	at org.dbflute.task.DfReplaceSchemaTask.createSchema(DfReplaceSchemaTask.java:261)
+	at org.dbflute.task.DfReplaceSchemaTask.doExecuteCoreProcess(DfReplaceSchemaTask.java:246)
+	at org.dbflute.task.DfReplaceSchemaTask.executeCoreProcess(DfReplaceSchemaTask.java:237)
+	at org.dbflute.task.DfReplaceSchemaTask.processMain(DfReplaceSchemaTask.java:230)
+	at org.dbflute.task.DfReplaceSchemaTask.doExecute(DfReplaceSchemaTask.java:157)
+	at org.dbflute.task.bs.DfAbstractTexenTask$1.callActualExecute(DfAbstractTexenTask.java:129)
+	at org.dbflute.task.bs.assistant.DfTaskBasicController.doExecute(DfTaskBasicController.java:192)
+	at org.dbflute.task.bs.assistant.DfTaskBasicController.execute(DfTaskBasicController.java:78)
+	at org.dbflute.task.bs.DfAbstractTexenTask.execute(DfAbstractTexenTask.java:151)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:288)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:105)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:357)
+	at org.apache.tools.ant.Target.performTasks(Target.java:385)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1329)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+2017-07-02 16:21:57,045 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 16:21:57,054 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s421ms *Abort
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
+2017-07-02 16:22:53,746 [main] INFO  (DfReplaceSchemaTask#begin():91) - +------------------------------------------+
+2017-07-02 16:22:53,751 [main] INFO  (DfReplaceSchemaTask#begin():92) - |                                          |
+2017-07-02 16:22:53,752 [main] INFO  (DfReplaceSchemaTask#begin():93) - |              ReplaceSchema               |
+2017-07-02 16:22:53,759 [main] INFO  (DfReplaceSchemaTask#begin():101) - |                                          |
+2017-07-02 16:22:53,760 [main] INFO  (DfReplaceSchemaTask#begin():102) - +------------------------------------------+
+2017-07-02 16:22:53,762 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():346) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2017-07-02 16:22:53,787 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:22:53,787 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:22:53,787 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:22:53,788 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:22:53,798 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 16:22:54,105 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 16:22:54,106 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 16:22:54,122 [main] ERROR (DfDBFluteTaskUtil#logException():150) - Look! Read the message below.
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Failed to execute DBFlute Task 'ReplaceSchema'.
+
+[Advice]
+Check the exception messages and the stack traces.
+
+[Database Product]
+MySQL 5.6.26
+
+[JDBC Driver]
+MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+* * * * * * * * * */
+org.dbflute.infra.reps.exception.DfReplaceSchemaExecuteNotAllowedException: Look! Read the message below.
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Your ReplaceSchema execution was not allowed.
+
+[Advice]
+Not found SQL files for ReplaceSchema,
+so your execution might be mistake...?
+
+[SQL Root Directory]
+playsql
+* * * * * * * * * */
+	at org.dbflute.infra.reps.DfRepsExecuteLimitter.throwReplaceSchemaExecuteNotAllowedException(DfRepsExecuteLimitter.java:76)
+	at org.dbflute.infra.reps.DfRepsExecuteLimitter.checkExecutableOrNot(DfRepsExecuteLimitter.java:60)
+	at org.dbflute.logic.replaceschema.process.DfCreateSchemaProcess.checkBeforeInitialize(DfCreateSchemaProcess.java:152)
+	at org.dbflute.logic.replaceschema.process.DfCreateSchemaProcess.execute(DfCreateSchemaProcess.java:140)
+	at org.dbflute.task.DfReplaceSchemaTask.createSchema(DfReplaceSchemaTask.java:261)
+	at org.dbflute.task.DfReplaceSchemaTask.doExecuteCoreProcess(DfReplaceSchemaTask.java:246)
+	at org.dbflute.task.DfReplaceSchemaTask.executeCoreProcess(DfReplaceSchemaTask.java:237)
+	at org.dbflute.task.DfReplaceSchemaTask.processMain(DfReplaceSchemaTask.java:230)
+	at org.dbflute.task.DfReplaceSchemaTask.doExecute(DfReplaceSchemaTask.java:157)
+	at org.dbflute.task.bs.DfAbstractTexenTask$1.callActualExecute(DfAbstractTexenTask.java:129)
+	at org.dbflute.task.bs.assistant.DfTaskBasicController.doExecute(DfTaskBasicController.java:192)
+	at org.dbflute.task.bs.assistant.DfTaskBasicController.execute(DfTaskBasicController.java:78)
+	at org.dbflute.task.bs.DfAbstractTexenTask.execute(DfAbstractTexenTask.java:151)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:288)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:105)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:357)
+	at org.apache.tools.ant.Target.performTasks(Target.java:385)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1329)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1298)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1181)
+	at org.apache.tools.ant.Main.runBuild(Main.java:698)
+	at org.apache.tools.ant.Main.startAnt(Main.java:199)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+2017-07-02 16:22:54,130 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 16:22:54,141 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s408ms *Abort
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
+2017-07-02 16:25:45,265 [main] INFO  (DfReplaceSchemaTask#begin():91) - +------------------------------------------+
+2017-07-02 16:25:45,269 [main] INFO  (DfReplaceSchemaTask#begin():92) - |                                          |
+2017-07-02 16:25:45,269 [main] INFO  (DfReplaceSchemaTask#begin():93) - |              ReplaceSchema               |
+2017-07-02 16:25:45,274 [main] INFO  (DfReplaceSchemaTask#begin():101) - |                                          |
+2017-07-02 16:25:45,274 [main] INFO  (DfReplaceSchemaTask#begin():102) - +------------------------------------------+
+2017-07-02 16:25:45,275 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():346) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2017-07-02 16:25:45,302 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:25:45,302 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:25:45,303 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:25:45,303 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:25:45,310 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 16:25:45,618 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 16:25:45,619 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 16:25:45,632 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():229) - 
+2017-07-02 16:25:45,633 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():230) - * * * * * * * * * * *
+2017-07-02 16:25:45,633 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():231) - *                   *
+2017-07-02 16:25:45,634 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():232) - * Initialize Schema *
+2017-07-02 16:25:45,634 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():233) - *                   *
+2017-07-02 16:25:45,635 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():234) - * * * * * * * * * * *
+2017-07-02 16:25:45,648 [main] INFO  (DfTableExtractor#doGetTableList():66) - ...Getting tables:
+2017-07-02 16:25:45,648 [main] INFO  (DfTableExtractor#doGetTableList():67) -   schema = {demodb.$$NoNameSchema$$ as main}
+2017-07-02 16:25:45,649 [main] INFO  (DfTableExtractor#doGetTableList():68) -   types  = [TABLE, VIEW]
+2017-07-02 16:25:45,759 [main] INFO  (DfCreateSchemaProcess#createSchema():266) - 
+2017-07-02 16:25:45,759 [main] INFO  (DfCreateSchemaProcess#createSchema():267) - * * * * * * * * *
+2017-07-02 16:25:45,760 [main] INFO  (DfCreateSchemaProcess#createSchema():268) - *               *
+2017-07-02 16:25:45,760 [main] INFO  (DfCreateSchemaProcess#createSchema():269) - * Create Schema *
+2017-07-02 16:25:45,760 [main] INFO  (DfCreateSchemaProcess#createSchema():270) - *               *
+2017-07-02 16:25:45,761 [main] INFO  (DfCreateSchemaProcess#createSchema():271) - * * * * * * * * *
+2017-07-02 16:25:45,764 [main] INFO  (DfSqlFileFireMan#fire():64) - ...Firing: replace-schema.sql
+2017-07-02 16:25:45,767 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+/* Create Tables */
+
+CREATE TABLE ACCOUNT
+(
+	ACCOUNT_ID bigint NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'アカウントID',
+	ACCOUNT_NAME varchar(30) NOT NULL COMMENT 'アカウント名',
+	ACCOUNT_DISPLAY_ID varchar(30) NOT NULL UNIQUE COMMENT 'アカウント表示ID',
+	FIRST_NAME varchar(30) COMMENT '苗字',
+	LAST_NAME varchar(30) COMMENT '名前',
+	EMAIL_ADDRESS varchar(256) NOT NULL COMMENT 'メールアドレス',
+	PASSWORD varchar(256) NOT NULL COMMENT 'パスワード',
+	ACCOUT_STATUS_CD char(3) NOT NULL COMMENT 'アカウントステータス',
+	INS_DATETIME datetime NOT NULL COMMENT '登録日時',
+	INS_TRACE varchar(200) NOT NULL COMMENT '登録ユーザー',
+	UPD_DATETIME datetime NOT NULL COMMENT '更新日時',
+	UPD_TRACE varchar(200) NOT NULL COMMENT '更新ユーザー',
+	PRIMARY KEY (ACCOUNT_ID)
+) COMMENT = 'アカウント'
+2017-07-02 16:25:45,877 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=1 failure=0
+2017-07-02 16:25:45,877 [main] INFO  (DfSqlFileFireMan#fire():89) - {Create Schema}: success=1 failure=0 (in 1 files)
+2017-07-02 16:25:45,969 [main] INFO  (DfLoadDataProcess#execute():129) - 
+2017-07-02 16:25:45,969 [main] INFO  (DfLoadDataProcess#execute():130) - * * * * * * * * * * *
+2017-07-02 16:25:45,970 [main] INFO  (DfLoadDataProcess#execute():131) - *                   *
+2017-07-02 16:25:45,970 [main] INFO  (DfLoadDataProcess#execute():132) - * Load Data         *
+2017-07-02 16:25:45,970 [main] INFO  (DfLoadDataProcess#execute():133) - *                   *
+2017-07-02 16:25:45,970 [main] INFO  (DfLoadDataProcess#execute():134) - * * * * * * * * * * *
+2017-07-02 16:25:45,995 [main] INFO  (DfTakeFinallyProcess#takeFinally():229) - 
+2017-07-02 16:25:45,996 [main] INFO  (DfTakeFinallyProcess#takeFinally():230) - * * * * * * * **
+2017-07-02 16:25:45,996 [main] INFO  (DfTakeFinallyProcess#takeFinally():231) - *              *
+2017-07-02 16:25:45,996 [main] INFO  (DfTakeFinallyProcess#takeFinally():232) - * Take Finally *
+2017-07-02 16:25:45,997 [main] INFO  (DfTakeFinallyProcess#takeFinally():233) - *              *
+2017-07-02 16:25:45,997 [main] INFO  (DfTakeFinallyProcess#takeFinally():234) - * * * * * * * **
+2017-07-02 16:25:46,003 [main] INFO  (DfSqlFileFireMan#fire():64) - ...Firing: take-finally.sql
+2017-07-02 16:25:46,006 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=0 failure=0
+2017-07-02 16:25:46,007 [main] INFO  (DfSqlFileFireMan#fire():89) - {Take Finally}: success=0 failure=0 (in 1 files)
+2017-07-02 16:25:46,008 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 16:25:46,018 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s764ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+ {Create Schema}: success=1 failure=0 (in 1 files)
+  o replace-schema.sql
+
+ {Load Data}: loaded-files=0
+  - (no data file)
+
+ {Take Finally}: success=0 failure=0 (in 1 files)
+  o take-finally.sql
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
+2017-07-02 16:32:59,150 [main] INFO  (DfReplaceSchemaTask#begin():91) - +------------------------------------------+
+2017-07-02 16:32:59,154 [main] INFO  (DfReplaceSchemaTask#begin():92) - |                                          |
+2017-07-02 16:32:59,154 [main] INFO  (DfReplaceSchemaTask#begin():93) - |              ReplaceSchema               |
+2017-07-02 16:32:59,161 [main] INFO  (DfReplaceSchemaTask#begin():101) - |                                          |
+2017-07-02 16:32:59,161 [main] INFO  (DfReplaceSchemaTask#begin():102) - +------------------------------------------+
+2017-07-02 16:32:59,163 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():346) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2017-07-02 16:32:59,204 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:32:59,204 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:32:59,205 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:32:59,205 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:32:59,217 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 16:32:59,597 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 16:32:59,597 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 16:32:59,613 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():229) - 
+2017-07-02 16:32:59,614 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():230) - * * * * * * * * * * *
+2017-07-02 16:32:59,614 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():231) - *                   *
+2017-07-02 16:32:59,616 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():232) - * Initialize Schema *
+2017-07-02 16:32:59,616 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():233) - *                   *
+2017-07-02 16:32:59,616 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():234) - * * * * * * * * * * *
+2017-07-02 16:32:59,637 [main] INFO  (DfTableExtractor#doGetTableList():66) - ...Getting tables:
+2017-07-02 16:32:59,637 [main] INFO  (DfTableExtractor#doGetTableList():67) -   schema = {demodb.$$NoNameSchema$$ as main}
+2017-07-02 16:32:59,638 [main] INFO  (DfTableExtractor#doGetTableList():68) -   types  = [TABLE, VIEW]
+2017-07-02 16:32:59,726 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():609) - truncate table account
+2017-07-02 16:32:59,734 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():609) - drop table account
+2017-07-02 16:32:59,790 [main] INFO  (DfCreateSchemaProcess#createSchema():266) - 
+2017-07-02 16:32:59,791 [main] INFO  (DfCreateSchemaProcess#createSchema():267) - * * * * * * * * *
+2017-07-02 16:32:59,791 [main] INFO  (DfCreateSchemaProcess#createSchema():268) - *               *
+2017-07-02 16:32:59,791 [main] INFO  (DfCreateSchemaProcess#createSchema():269) - * Create Schema *
+2017-07-02 16:32:59,791 [main] INFO  (DfCreateSchemaProcess#createSchema():270) - *               *
+2017-07-02 16:32:59,792 [main] INFO  (DfCreateSchemaProcess#createSchema():271) - * * * * * * * * *
+2017-07-02 16:32:59,798 [main] INFO  (DfSqlFileFireMan#fire():64) - ...Firing: replace-schema.sql
+2017-07-02 16:32:59,802 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+/* Create Tables */
+
+CREATE TABLE ACCOUNT
+(
+	ACCOUNT_ID bigint NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'アカウントID',
+	ACCOUNT_NAME varchar(30) NOT NULL COMMENT 'アカウント名',
+	ACCOUNT_DISPLAY_ID varchar(30) NOT NULL UNIQUE COMMENT 'アカウント表示ID',
+	FIRST_NAME varchar(30) COMMENT '苗字',
+	LAST_NAME varchar(30) COMMENT '名前',
+	EMAIL_ADDRESS varchar(256) NOT NULL COMMENT 'メールアドレス',
+	PASSWORD varchar(256) NOT NULL COMMENT 'パスワード',
+	ACCOUT_STATUS_CD char(3) NOT NULL COMMENT 'アカウントステータス',
+	INS_DATETIME datetime NOT NULL COMMENT '登録日時',
+	INS_TRACE varchar(200) NOT NULL COMMENT '登録ユーザー',
+	UPD_DATETIME datetime NOT NULL COMMENT '更新日時',
+	UPD_TRACE varchar(200) NOT NULL COMMENT '更新ユーザー',
+	PRIMARY KEY (ACCOUNT_ID)
+) COMMENT = 'アカウント'
+2017-07-02 16:32:59,870 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=1 failure=0
+2017-07-02 16:32:59,870 [main] INFO  (DfSqlFileFireMan#fire():89) - {Create Schema}: success=1 failure=0 (in 1 files)
+2017-07-02 16:33:00,037 [main] INFO  (DfLoadDataProcess#execute():129) - 
+2017-07-02 16:33:00,038 [main] INFO  (DfLoadDataProcess#execute():130) - * * * * * * * * * * *
+2017-07-02 16:33:00,038 [main] INFO  (DfLoadDataProcess#execute():131) - *                   *
+2017-07-02 16:33:00,038 [main] INFO  (DfLoadDataProcess#execute():132) - * Load Data         *
+2017-07-02 16:33:00,038 [main] INFO  (DfLoadDataProcess#execute():133) - *                   *
+2017-07-02 16:33:00,039 [main] INFO  (DfLoadDataProcess#execute():134) - * * * * * * * * * * *
+2017-07-02 16:33:00,067 [main] INFO  (DfTakeFinallyProcess#takeFinally():229) - 
+2017-07-02 16:33:00,068 [main] INFO  (DfTakeFinallyProcess#takeFinally():230) - * * * * * * * **
+2017-07-02 16:33:00,068 [main] INFO  (DfTakeFinallyProcess#takeFinally():231) - *              *
+2017-07-02 16:33:00,068 [main] INFO  (DfTakeFinallyProcess#takeFinally():232) - * Take Finally *
+2017-07-02 16:33:00,068 [main] INFO  (DfTakeFinallyProcess#takeFinally():233) - *              *
+2017-07-02 16:33:00,069 [main] INFO  (DfTakeFinallyProcess#takeFinally():234) - * * * * * * * **
+2017-07-02 16:33:00,076 [main] INFO  (DfSqlFileFireMan#fire():64) - ...Firing: take-finally.sql
+2017-07-02 16:33:00,078 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=0 failure=0
+2017-07-02 16:33:00,079 [main] INFO  (DfSqlFileFireMan#fire():89) - {Take Finally}: success=0 failure=0 (in 1 files)
+2017-07-02 16:33:00,080 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 16:33:00,091 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s960ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+ {Create Schema}: success=1 failure=0 (in 1 files)
+  o replace-schema.sql
+
+ {Load Data}: loaded-files=0
+  - (no data file)
+
+ {Take Finally}: success=0 failure=0 (in 1 files)
+  o take-finally.sql
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
+2017-07-02 16:33:00,813 [main] INFO  (TorqueJDBCTransformTask#begin():104) - +------------------------------------------+
+2017-07-02 16:33:00,815 [main] INFO  (TorqueJDBCTransformTask#begin():105) - |                                          |
+2017-07-02 16:33:00,815 [main] INFO  (TorqueJDBCTransformTask#begin():106) - |                   JDBC                   |
+2017-07-02 16:33:00,816 [main] INFO  (TorqueJDBCTransformTask#begin():107) - |                                          |
+2017-07-02 16:33:00,816 [main] INFO  (TorqueJDBCTransformTask#begin():108) - +------------------------------------------+
+2017-07-02 16:33:00,843 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:33:00,843 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:33:00,843 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:33:00,844 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:33:00,899 [main] INFO  (DfSchemaXmlSerializer#serialize():285) - 
+2017-07-02 16:33:00,899 [main] INFO  (DfSchemaXmlSerializer#serialize():286) - ...Starting to process JDBC to SchemaXML
+2017-07-02 16:33:00,900 [main] INFO  (DfSchemaXmlSerializer#doLoadPreviousSchema():1460) - ...Loading previous schema (schema diff process)
+2017-07-02 16:33:00,900 [main] INFO  (DfSchemaXmlSerializer#doLoadPreviousSchema():1463) -  -> no previous (first time)
+2017-07-02 16:33:00,921 [main] INFO  (DfSchemaXmlSerializer#generateXML():359) - ...Getting DB connection
+2017-07-02 16:33:00,924 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 16:33:01,159 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 16:33:01,159 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 16:33:01,161 [main] INFO  (DfSchemaXmlSerializer#generateXML():362) - ...Getting DB meta data
+2017-07-02 16:33:01,167 [main] INFO  (DfTableExtractor#doGetTableList():66) - ...Getting tables:
+2017-07-02 16:33:01,167 [main] INFO  (DfTableExtractor#doGetTableList():67) -   schema = {demodb.$$NoNameSchema$$ as main}
+2017-07-02 16:33:01,167 [main] INFO  (DfTableExtractor#doGetTableList():68) -   types  = [TABLE, VIEW]
+2017-07-02 16:33:01,177 [main] INFO  (DfDbCommentExtractorBase#doSelectUserTabComments():121) - select table_type as OBJECT_TYPE, table_name as TABLE_NAME, table_comment as COMMENTS from information_schema.tables where table_schema = 'demodb' order by table_name asc
+2017-07-02 16:33:01,205 [main] INFO  (DfDbCommentExtractorBase#doSelectUserColComments():168) - select table_name as TABLE_NAME, column_name as COLUMN_NAME, column_comment as COMMENTS from information_schema.columns where table_schema = 'demodb' order by table_name asc, column_name asc
+2017-07-02 16:33:01,229 [main] INFO  (DfSchemaXmlSerializer#processTable():419) - 
+2017-07-02 16:33:01,230 [main] INFO  (DfSchemaXmlSerializer#processTable():420) - $ /= = = = = = = = = = = = = = = = = = = = = = = = = =
+2017-07-02 16:33:01,230 [main] INFO  (DfSchemaXmlSerializer#processTable():421) - $ [Table List]
+2017-07-02 16:33:01,231 [main] INFO  (DfSchemaXmlSerializer#doProcessTable():501) - $ demodb.account(TABLE) // アカウント
+2017-07-02 16:33:01,304 [main] INFO  (DfSchemaXmlSerializer#processTable():433) - $ 
+2017-07-02 16:33:01,305 [main] INFO  (DfSchemaXmlSerializer#processTable():434) - $ [Table Count]
+2017-07-02 16:33:01,305 [main] INFO  (DfSchemaXmlSerializer#processTable():435) - $ 1
+2017-07-02 16:33:01,305 [main] INFO  (DfSchemaXmlSerializer#processTable():436) - $ = = = = = = = = = =/
+2017-07-02 16:33:01,305 [main] INFO  (DfSchemaXmlSerializer#processTable():437) - 
+2017-07-02 16:33:01,307 [main] INFO  (DfSchemaXmlSerializer#processSequence():796) - ...Getting sequences
+2017-07-02 16:33:01,310 [main] INFO  (DfSchemaXmlSerializer#serialize():300) - ...Serializing XML:
+2017-07-02 16:33:01,311 [main] INFO  (DfSchemaXmlSerializer#serialize():301) -   filePath = ./schema/project-schema-demodb.xml
+2017-07-02 16:33:01,311 [main] INFO  (DfSchemaXmlSerializer#serialize():302) -   encoding = UTF-8
+2017-07-02 16:33:01,328 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 16:33:01,336 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s529ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {JDBC}
+2017-07-02 16:33:02,067 [main] INFO  (TorqueDocumentationTask#begin():177) - +------------------------------------------+
+2017-07-02 16:33:02,069 [main] INFO  (TorqueDocumentationTask#begin():178) - |                                          |
+2017-07-02 16:33:02,069 [main] INFO  (TorqueDocumentationTask#begin():179) - |                   Doc                    |
+2017-07-02 16:33:02,070 [main] INFO  (TorqueDocumentationTask#begin():187) - |                                          |
+2017-07-02 16:33:02,070 [main] INFO  (TorqueDocumentationTask#begin():188) - +------------------------------------------+
+2017-07-02 16:33:02,091 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:33:02,092 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:33:02,092 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:33:02,092 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:33:02,093 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():249) - 
+2017-07-02 16:33:02,093 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():250) - * * * * * * * * * * *
+2017-07-02 16:33:02,094 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():251) - *                   *
+2017-07-02 16:33:02,094 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():252) - *    Schema HTML    *
+2017-07-02 16:33:02,094 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():253) - *                   *
+2017-07-02 16:33:02,094 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():254) - * * * * * * * * * * *
+2017-07-02 16:33:02,138 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:33:02,198 [main] INFO  (DfAbstractTexenTask#fireVelocityProcess():253) - generator.parse("doc/ControlDocument.vm", ctx);
+2017-07-02 16:33:02,330 [main] INFO  (Database#doEnableDocumentOutputDirectory():1180) - ...Setting up documentOutputDirectory: ./output/doc
+2017-07-02 16:33:02,337 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():62) - /=======================================
+2017-07-02 16:33:02,337 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():63) - ...Initializing additional primary keys.
+2017-07-02 16:33:02,339 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():88) - ==========/
+2017-07-02 16:33:02,340 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():62) - /=======================================
+2017-07-02 16:33:02,341 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():63) - ...Initializing additional unique keys.
+2017-07-02 16:33:02,342 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():83) - ==========/
+2017-07-02 16:33:02,344 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():68) - /=======================================
+2017-07-02 16:33:02,344 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():69) - ...Initializing additional foreign keys.
+2017-07-02 16:33:02,346 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():88) - ==========/
+2017-07-02 16:33:02,357 [main] INFO  (DfDocumentSelector#doLoadSchemaHistory():157) - ...Loading schema history
+2017-07-02 16:33:02,357 [main] INFO  (DfDocumentSelector#doLoadSchemaHistory():163) -  -> no history
+2017-07-02 16:33:02,480 [main] INFO  (DfRefreshResourceProcess#show():299) - /===========================================================================
+2017-07-02 16:33:02,480 [main] INFO  (DfRefreshResourceProcess#show():299) - ...Refreshing [demoApp] by http://localhost:8386/
+2017-07-02 16:33:02,510 [main] INFO  (DfRefreshResourceProcess#show():299) - ==========/
+2017-07-02 16:33:02,514 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s457ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {Doc}
+2017-07-02 16:33:04,295 [main] INFO  (TorqueDataModelTask#begin():110) - +------------------------------------------+
+2017-07-02 16:33:04,297 [main] INFO  (TorqueDataModelTask#begin():111) - |                                          |
+2017-07-02 16:33:04,297 [main] INFO  (TorqueDataModelTask#begin():112) - |                 Generate                 |
+2017-07-02 16:33:04,297 [main] INFO  (TorqueDataModelTask#begin():113) - |                                          |
+2017-07-02 16:33:04,297 [main] INFO  (TorqueDataModelTask#begin():114) - +------------------------------------------+
+2017-07-02 16:33:04,318 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:33:04,319 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:33:04,320 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:33:04,321 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:33:04,335 [main] INFO  (TorqueDataModelTask#setupControlTemplate():166) - 
+2017-07-02 16:33:04,336 [main] INFO  (TorqueDataModelTask#setupControlTemplate():167) - ...Using Java control: om/ControlGenerateJava.vm
+2017-07-02 16:33:04,365 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:33:04,410 [main] INFO  (DfAbstractTexenTask#fireVelocityProcess():253) - generator.parse("om/ControlGenerateJava.vm", ctx);
+2017-07-02 16:33:04,619 [main] INFO  (Database#doEnableGenerateOutputDirectory():1148) - ...Setting up generateOutputDirectory: ../src/main/java
+2017-07-02 16:33:04,624 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():62) - /=======================================
+2017-07-02 16:33:04,625 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():63) - ...Initializing additional primary keys.
+2017-07-02 16:33:04,626 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():88) - ==========/
+2017-07-02 16:33:04,627 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():62) - /=======================================
+2017-07-02 16:33:04,627 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():63) - ...Initializing additional unique keys.
+2017-07-02 16:33:04,628 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():83) - ==========/
+2017-07-02 16:33:04,630 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():68) - /=======================================
+2017-07-02 16:33:04,630 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():69) - ...Initializing additional foreign keys.
+2017-07-02 16:33:04,631 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():88) - ==========/
+2017-07-02 16:33:04,644 [main] INFO  (DfIncludeQueryInitializer#initializeIncludeQuery():58) - /=============================
+2017-07-02 16:33:04,644 [main] INFO  (DfIncludeQueryInitializer#initializeIncludeQuery():59) - ...Initializing include query.
+2017-07-02 16:33:04,645 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - String
+2017-07-02 16:33:04,645 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - Number
+2017-07-02 16:33:04,645 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - Date
+2017-07-02 16:33:04,646 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():86) -   NotEqual -> []
+2017-07-02 16:33:04,646 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():86) -   InScope -> []
+2017-07-02 16:33:04,646 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():86) -   NotInScope -> []
+2017-07-02 16:33:04,646 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - OrderBy
+2017-07-02 16:33:04,647 [main] INFO  (DfIncludeQueryInitializer#initializeIncludeQuery():61) - ========/
+2017-07-02 16:33:04,657 [main] INFO  (Database#info():2718) - public void parseAllCommon() {
+2017-07-02 16:33:04,658 [main] INFO  (Database#info():2718) -     parse('CDef');
+2017-07-02 16:33:04,702 [main] INFO  (Database#info():2718) -     parse('DBCurrent');
+2017-07-02 16:33:04,708 [main] INFO  (Database#info():2718) -     parse('DBFluteConfig');
+2017-07-02 16:33:04,727 [main] INFO  (Database#info():2718) -     parse('DBFluteInitializer');
+2017-07-02 16:33:04,732 [main] INFO  (Database#info():2718) -     parse('DBMetaInstanceHandler');
+2017-07-02 16:33:04,744 [main] INFO  (Database#info():2718) -     parse('EntityDefinedCommonColumn');
+2017-07-02 16:33:04,759 [main] INFO  (Database#info():2718) -     parse('ImplementedBehaviorSelector');
+2017-07-02 16:33:04,776 [main] INFO  (Database#info():2718) -     parse('ImplementedCommonColumnAutoSetupper');
+2017-07-02 16:33:04,784 [main] INFO  (Database#info():2718) -     parse('ImplementedInvokerAssistant');
+2017-07-02 16:33:04,805 [main] INFO  (Database#info():2718) -     parse('ImplementedSqlClauseCreator');
+2017-07-02 16:33:04,811 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:33:04,812 [main] INFO  (Database#info():2718) - public void parseContainerConfig() {
+2017-07-02 16:33:04,812 [main] INFO  (Database#info():2718) -     parse('com/demo/dbflute/allcommon/DBFluteBeansJavaConfig.java')
+2017-07-02 16:33:04,828 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:33:04,837 [main] INFO  (DfOldClassHandler#info():1045) - public void deleteOldTableClass() {
+2017-07-02 16:33:04,869 [main] INFO  (DfOldClassHandler#info():1045) - }
+2017-07-02 16:33:04,870 [main] INFO  (Database#info():2718) - public void parseTableClass() {
+2017-07-02 16:33:04,871 [main] INFO  (Database#info():2718) -     parse('account');
+2017-07-02 16:33:05,164 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:33:05,164 [main] INFO  (Database#info():2718) -  
+2017-07-02 16:33:05,188 [main] INFO  (DfRefreshResourceProcess#show():299) - /===========================================================================
+2017-07-02 16:33:05,188 [main] INFO  (DfRefreshResourceProcess#show():299) - ...Refreshing [demoApp] by http://localhost:8386/
+2017-07-02 16:33:05,192 [main] INFO  (DfRefreshResourceProcess#show():299) - ==========/
+2017-07-02 16:33:05,197 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s910ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {Generate}
+2017-07-02 16:33:06,719 [main] INFO  (DfOutsideSqlTestTask#begin():77) - +------------------------------------------+
+2017-07-02 16:33:06,722 [main] INFO  (DfOutsideSqlTestTask#begin():78) - |                                          |
+2017-07-02 16:33:06,722 [main] INFO  (DfOutsideSqlTestTask#begin():79) - |              OutsideSqlTest              |
+2017-07-02 16:33:06,723 [main] INFO  (DfOutsideSqlTestTask#begin():80) - |                                          |
+2017-07-02 16:33:06,723 [main] INFO  (DfOutsideSqlTestTask#begin():81) - +------------------------------------------+
+2017-07-02 16:33:06,749 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:33:06,750 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:33:06,750 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:33:06,750 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:33:06,787 [main] INFO  (DfSqlFileFireMan#fire():89) - {Fired SQL}: success=0 failure=0 (in 0 files)
+2017-07-02 16:33:06,802 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s133ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+ {Checked SQL}
+_/_/_/_/_/_/_/_/_/_/ {OutsideSqlTest}
+2017-07-02 16:33:07,733 [main] INFO  (DfSql2EntityTask#begin():106) - +------------------------------------------+
+2017-07-02 16:33:07,735 [main] INFO  (DfSql2EntityTask#begin():107) - |                                          |
+2017-07-02 16:33:07,735 [main] INFO  (DfSql2EntityTask#begin():108) - |                Sql2Entity                |
+2017-07-02 16:33:07,735 [main] INFO  (DfSql2EntityTask#begin():109) - |                                          |
+2017-07-02 16:33:07,735 [main] INFO  (DfSql2EntityTask#begin():110) - +------------------------------------------+
+2017-07-02 16:33:07,754 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:33:07,754 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:33:07,755 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:33:07,755 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:33:07,769 [main] INFO  (DfSql2EntityTask#setupControlTemplate():177) - 
+2017-07-02 16:33:07,770 [main] INFO  (DfSql2EntityTask#setupControlTemplate():178) - ...Using Java control: om/ControlSql2EntityJava.vm
+2017-07-02 16:33:07,778 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:33:07,859 [main] INFO  (DfSqlFileFireMan#fire():89) - {Fired SQL}: success=0 failure=0 (in 0 files)
+2017-07-02 16:33:07,883 [main] INFO  (DfSql2EntityTask#initControlContext():311) - 
+2017-07-02 16:33:07,884 [main] INFO  (DfSql2EntityTask#initControlContext():312) - ...Preparing generation of customize-entities and parameter-beans
+2017-07-02 16:33:07,884 [main] INFO  (DfSql2EntityTask#initControlContext():313) - * * * * * * * * * *
+2017-07-02 16:33:07,884 [main] INFO  (DfSql2EntityTask#initControlContext():314) - * CustomizeEntity *
+2017-07-02 16:33:07,884 [main] INFO  (DfSql2EntityTask#initControlContext():315) - * * * * * * * * * *
+2017-07-02 16:33:07,884 [main] INFO  (DfSql2EntityTask#showParameterBean():932) - * * * * * * * * *
+2017-07-02 16:33:07,885 [main] INFO  (DfSql2EntityTask#showParameterBean():933) - * ParameterBean *
+2017-07-02 16:33:07,885 [main] INFO  (DfSql2EntityTask#showParameterBean():934) - * * * * * * * * *
+2017-07-02 16:33:07,887 [main] INFO  (DfAbstractTexenTask#fireVelocityProcess():253) - generator.parse("om/ControlSql2EntityJava.vm", ctx);
+2017-07-02 16:33:08,069 [main] INFO  (Database#doEnableSql2EntityOutputDirectory():1164) - ...Setting up sql2EntityOutputDirectory: ../src/main/java
+2017-07-02 16:33:08,072 [main] INFO  (DfOldClassHandler#info():1045) - public void deleteOldCustomizeClass() {
+2017-07-02 16:33:08,082 [main] INFO  (DfOldClassHandler#info():1045) - }
+2017-07-02 16:33:08,082 [main] INFO  (Database#info():2718) - public void parseCustomizeEntity() {
+2017-07-02 16:33:08,084 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:33:08,093 [main] INFO  (DfSql2EntityTask#showTargetSqlFileInformation():303) - 
+/- - - - - - - - - - - - - - - - - - - - - - - -
+Target SQL files: 0
+
+- - - - - - - - - -/
+2017-07-02 16:33:08,098 [main] INFO  (DfRefreshResourceProcess#show():299) - /===========================================================================
+2017-07-02 16:33:08,099 [main] INFO  (DfRefreshResourceProcess#show():299) - ...Refreshing [demoApp] by http://localhost:8386/
+2017-07-02 16:33:08,101 [main] INFO  (DfRefreshResourceProcess#show():299) - ==========/
+2017-07-02 16:33:08,108 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s392ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {Sql2Entity}
+2017-07-02 16:41:10,813 [main] INFO  (DfReplaceSchemaTask#begin():91) - +------------------------------------------+
+2017-07-02 16:41:10,817 [main] INFO  (DfReplaceSchemaTask#begin():92) - |                                          |
+2017-07-02 16:41:10,817 [main] INFO  (DfReplaceSchemaTask#begin():93) - |              ReplaceSchema               |
+2017-07-02 16:41:10,824 [main] INFO  (DfReplaceSchemaTask#begin():101) - |                                          |
+2017-07-02 16:41:10,824 [main] INFO  (DfReplaceSchemaTask#begin():102) - +------------------------------------------+
+2017-07-02 16:41:10,826 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():346) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2017-07-02 16:41:10,854 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:41:10,855 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:41:10,855 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:41:10,855 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:41:10,866 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 16:41:11,240 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 16:41:11,241 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 16:41:11,258 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():229) - 
+2017-07-02 16:41:11,258 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():230) - * * * * * * * * * * *
+2017-07-02 16:41:11,258 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():231) - *                   *
+2017-07-02 16:41:11,260 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():232) - * Initialize Schema *
+2017-07-02 16:41:11,260 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():233) - *                   *
+2017-07-02 16:41:11,261 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():234) - * * * * * * * * * * *
+2017-07-02 16:41:11,281 [main] INFO  (DfTableExtractor#doGetTableList():66) - ...Getting tables:
+2017-07-02 16:41:11,282 [main] INFO  (DfTableExtractor#doGetTableList():67) -   schema = {demodb.$$NoNameSchema$$ as main}
+2017-07-02 16:41:11,283 [main] INFO  (DfTableExtractor#doGetTableList():68) -   types  = [TABLE, VIEW]
+2017-07-02 16:41:11,370 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():609) - truncate table account
+2017-07-02 16:41:11,380 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():609) - drop table account
+2017-07-02 16:41:11,443 [main] INFO  (DfCreateSchemaProcess#createSchema():266) - 
+2017-07-02 16:41:11,445 [main] INFO  (DfCreateSchemaProcess#createSchema():267) - * * * * * * * * *
+2017-07-02 16:41:11,445 [main] INFO  (DfCreateSchemaProcess#createSchema():268) - *               *
+2017-07-02 16:41:11,445 [main] INFO  (DfCreateSchemaProcess#createSchema():269) - * Create Schema *
+2017-07-02 16:41:11,446 [main] INFO  (DfCreateSchemaProcess#createSchema():270) - *               *
+2017-07-02 16:41:11,446 [main] INFO  (DfCreateSchemaProcess#createSchema():271) - * * * * * * * * *
+2017-07-02 16:41:11,452 [main] INFO  (DfSqlFileFireMan#fire():64) - ...Firing: replace-schema.sql
+2017-07-02 16:41:11,456 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+/* Create Tables */
+
+CREATE TABLE ACCOUNT
+(
+	ACCOUNT_ID bigint NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'アカウントID',
+	ACCOUNT_NAME varchar(30) NOT NULL COMMENT 'アカウント名',
+	ACCOUNT_DISPLAY_ID varchar(30) NOT NULL UNIQUE COMMENT 'アカウント表示ID',
+	FIRST_NAME varchar(30) COMMENT '苗字',
+	LAST_NAME varchar(30) COMMENT '名前',
+	EMAIL_ADDRESS varchar(256) NOT NULL COMMENT 'メールアドレス',
+	PASSWORD varchar(256) NOT NULL COMMENT 'パスワード',
+	ACCOUT_STATUS_CD char(3) NOT NULL COMMENT 'アカウントステータス',
+	INS_DATETIME datetime NOT NULL COMMENT '登録日時',
+	INS_TRACE varchar(200) NOT NULL COMMENT '登録ユーザー',
+	UPD_DATETIME datetime NOT NULL COMMENT '更新日時',
+	UPD_TRACE varchar(200) NOT NULL COMMENT '更新ユーザー',
+	PRIMARY KEY (ACCOUNT_ID)
+) COMMENT = 'アカウント'
+2017-07-02 16:41:11,531 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=1 failure=0
+2017-07-02 16:41:11,532 [main] INFO  (DfSqlFileFireMan#fire():89) - {Create Schema}: success=1 failure=0 (in 1 files)
+2017-07-02 16:41:11,695 [main] INFO  (DfLoadDataProcess#execute():129) - 
+2017-07-02 16:41:11,696 [main] INFO  (DfLoadDataProcess#execute():130) - * * * * * * * * * * *
+2017-07-02 16:41:11,696 [main] INFO  (DfLoadDataProcess#execute():131) - *                   *
+2017-07-02 16:41:11,696 [main] INFO  (DfLoadDataProcess#execute():132) - * Load Data         *
+2017-07-02 16:41:11,697 [main] INFO  (DfLoadDataProcess#execute():133) - *                   *
+2017-07-02 16:41:11,697 [main] INFO  (DfLoadDataProcess#execute():134) - * * * * * * * * * * *
+2017-07-02 16:41:11,728 [main] INFO  (DfTakeFinallyProcess#takeFinally():229) - 
+2017-07-02 16:41:11,728 [main] INFO  (DfTakeFinallyProcess#takeFinally():230) - * * * * * * * **
+2017-07-02 16:41:11,728 [main] INFO  (DfTakeFinallyProcess#takeFinally():231) - *              *
+2017-07-02 16:41:11,729 [main] INFO  (DfTakeFinallyProcess#takeFinally():232) - * Take Finally *
+2017-07-02 16:41:11,729 [main] INFO  (DfTakeFinallyProcess#takeFinally():233) - *              *
+2017-07-02 16:41:11,729 [main] INFO  (DfTakeFinallyProcess#takeFinally():234) - * * * * * * * **
+2017-07-02 16:41:11,739 [main] INFO  (DfSqlFileFireMan#fire():64) - ...Firing: take-finally.sql
+2017-07-02 16:41:11,740 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=0 failure=0
+2017-07-02 16:41:11,741 [main] INFO  (DfSqlFileFireMan#fire():89) - {Take Finally}: success=0 failure=0 (in 1 files)
+2017-07-02 16:41:11,742 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 16:41:11,748 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s968ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+ {Create Schema}: success=1 failure=0 (in 1 files)
+  o replace-schema.sql
+
+ {Load Data}: loaded-files=0
+  - (no data file)
+
+ {Take Finally}: success=0 failure=0 (in 1 files)
+  o take-finally.sql
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
+2017-07-02 16:41:12,510 [main] INFO  (TorqueJDBCTransformTask#begin():104) - +------------------------------------------+
+2017-07-02 16:41:12,514 [main] INFO  (TorqueJDBCTransformTask#begin():105) - |                                          |
+2017-07-02 16:41:12,515 [main] INFO  (TorqueJDBCTransformTask#begin():106) - |                   JDBC                   |
+2017-07-02 16:41:12,515 [main] INFO  (TorqueJDBCTransformTask#begin():107) - |                                          |
+2017-07-02 16:41:12,515 [main] INFO  (TorqueJDBCTransformTask#begin():108) - +------------------------------------------+
+2017-07-02 16:41:12,542 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:41:12,543 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:41:12,543 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:41:12,544 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:41:12,596 [main] INFO  (DfSchemaXmlSerializer#serialize():285) - 
+2017-07-02 16:41:12,597 [main] INFO  (DfSchemaXmlSerializer#serialize():286) - ...Starting to process JDBC to SchemaXML
+2017-07-02 16:41:12,597 [main] INFO  (DfSchemaXmlSerializer#doLoadPreviousSchema():1460) - ...Loading previous schema (schema diff process)
+2017-07-02 16:41:12,608 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:41:12,699 [main] INFO  (DfSchemaXmlSerializer#generateXML():359) - ...Getting DB connection
+2017-07-02 16:41:12,702 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2017-07-02 16:41:12,953 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.26
+2017-07-02 16:41:12,953 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 ) for JDBC 4.0
+2017-07-02 16:41:12,954 [main] INFO  (DfSchemaXmlSerializer#generateXML():362) - ...Getting DB meta data
+2017-07-02 16:41:12,955 [main] INFO  (DfTableExtractor#doGetTableList():66) - ...Getting tables:
+2017-07-02 16:41:12,955 [main] INFO  (DfTableExtractor#doGetTableList():67) -   schema = {demodb.$$NoNameSchema$$ as main}
+2017-07-02 16:41:12,955 [main] INFO  (DfTableExtractor#doGetTableList():68) -   types  = [TABLE, VIEW]
+2017-07-02 16:41:12,964 [main] INFO  (DfDbCommentExtractorBase#doSelectUserTabComments():121) - select table_type as OBJECT_TYPE, table_name as TABLE_NAME, table_comment as COMMENTS from information_schema.tables where table_schema = 'demodb' order by table_name asc
+2017-07-02 16:41:12,968 [main] INFO  (DfDbCommentExtractorBase#doSelectUserColComments():168) - select table_name as TABLE_NAME, column_name as COLUMN_NAME, column_comment as COMMENTS from information_schema.columns where table_schema = 'demodb' order by table_name asc, column_name asc
+2017-07-02 16:41:12,996 [main] INFO  (DfSchemaXmlSerializer#processTable():419) - 
+2017-07-02 16:41:12,996 [main] INFO  (DfSchemaXmlSerializer#processTable():420) - $ /= = = = = = = = = = = = = = = = = = = = = = = = = =
+2017-07-02 16:41:12,997 [main] INFO  (DfSchemaXmlSerializer#processTable():421) - $ [Table List]
+2017-07-02 16:41:12,997 [main] INFO  (DfSchemaXmlSerializer#doProcessTable():501) - $ demodb.account(TABLE) // アカウント
+2017-07-02 16:41:13,056 [main] INFO  (DfSchemaXmlSerializer#processTable():433) - $ 
+2017-07-02 16:41:13,057 [main] INFO  (DfSchemaXmlSerializer#processTable():434) - $ [Table Count]
+2017-07-02 16:41:13,058 [main] INFO  (DfSchemaXmlSerializer#processTable():435) - $ 1
+2017-07-02 16:41:13,058 [main] INFO  (DfSchemaXmlSerializer#processTable():436) - $ = = = = = = = = = =/
+2017-07-02 16:41:13,058 [main] INFO  (DfSchemaXmlSerializer#processTable():437) - 
+2017-07-02 16:41:13,060 [main] INFO  (DfSchemaXmlSerializer#processSequence():796) - ...Getting sequences
+2017-07-02 16:41:13,064 [main] INFO  (DfSchemaXmlSerializer#serialize():300) - ...Serializing XML:
+2017-07-02 16:41:13,064 [main] INFO  (DfSchemaXmlSerializer#serialize():301) -   filePath = ./schema/project-schema-demodb.xml
+2017-07-02 16:41:13,065 [main] INFO  (DfSchemaXmlSerializer#serialize():302) -   encoding = UTF-8
+2017-07-02 16:41:13,083 [main] INFO  (DfSchemaXmlSerializer#doLoadNextSchema():1478) - ...Loading next schema (schema diff process)
+2017-07-02 16:41:13,085 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:41:13,122 [main] INFO  (DfSchemaXmlSerializer#doLoadNextSchema():1493) -  -> same as previous (schema diff)
+2017-07-02 16:41:13,122 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2017-07-02 16:41:13,131 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s628ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql (MySQL 5.6.26)
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {JDBC}
+2017-07-02 16:41:13,849 [main] INFO  (TorqueDocumentationTask#begin():177) - +------------------------------------------+
+2017-07-02 16:41:13,851 [main] INFO  (TorqueDocumentationTask#begin():178) - |                                          |
+2017-07-02 16:41:13,851 [main] INFO  (TorqueDocumentationTask#begin():179) - |                   Doc                    |
+2017-07-02 16:41:13,851 [main] INFO  (TorqueDocumentationTask#begin():187) - |                                          |
+2017-07-02 16:41:13,852 [main] INFO  (TorqueDocumentationTask#begin():188) - +------------------------------------------+
+2017-07-02 16:41:13,869 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:41:13,869 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:41:13,870 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:41:13,870 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:41:13,873 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():249) - 
+2017-07-02 16:41:13,873 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():250) - * * * * * * * * * * *
+2017-07-02 16:41:13,873 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():251) - *                   *
+2017-07-02 16:41:13,873 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():252) - *    Schema HTML    *
+2017-07-02 16:41:13,873 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():253) - *                   *
+2017-07-02 16:41:13,874 [main] INFO  (TorqueDocumentationTask#processSchemaHtml():254) - * * * * * * * * * * *
+2017-07-02 16:41:13,909 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:41:13,964 [main] INFO  (DfAbstractTexenTask#fireVelocityProcess():253) - generator.parse("doc/ControlDocument.vm", ctx);
+2017-07-02 16:41:14,091 [main] INFO  (Database#doEnableDocumentOutputDirectory():1180) - ...Setting up documentOutputDirectory: ./output/doc
+2017-07-02 16:41:14,098 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():62) - /=======================================
+2017-07-02 16:41:14,099 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():63) - ...Initializing additional primary keys.
+2017-07-02 16:41:14,100 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():88) - ==========/
+2017-07-02 16:41:14,102 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():62) - /=======================================
+2017-07-02 16:41:14,102 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():63) - ...Initializing additional unique keys.
+2017-07-02 16:41:14,103 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():83) - ==========/
+2017-07-02 16:41:14,105 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():68) - /=======================================
+2017-07-02 16:41:14,105 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():69) - ...Initializing additional foreign keys.
+2017-07-02 16:41:14,107 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():88) - ==========/
+2017-07-02 16:41:14,117 [main] INFO  (DfDocumentSelector#doLoadSchemaHistory():157) - ...Loading schema history
+2017-07-02 16:41:14,117 [main] INFO  (DfDocumentSelector#doLoadSchemaHistory():163) -  -> no history
+2017-07-02 16:41:14,212 [main] INFO  (DfRefreshResourceProcess#show():299) - /===========================================================================
+2017-07-02 16:41:14,213 [main] INFO  (DfRefreshResourceProcess#show():299) - ...Refreshing [demoApp] by http://localhost:8386/
+2017-07-02 16:41:14,223 [main] INFO  (DfRefreshResourceProcess#show():299) - ==========/
+2017-07-02 16:41:14,226 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s387ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {Doc}
+2017-07-02 16:41:16,294 [main] INFO  (TorqueDataModelTask#begin():110) - +------------------------------------------+
+2017-07-02 16:41:16,296 [main] INFO  (TorqueDataModelTask#begin():111) - |                                          |
+2017-07-02 16:41:16,296 [main] INFO  (TorqueDataModelTask#begin():112) - |                 Generate                 |
+2017-07-02 16:41:16,296 [main] INFO  (TorqueDataModelTask#begin():113) - |                                          |
+2017-07-02 16:41:16,297 [main] INFO  (TorqueDataModelTask#begin():114) - +------------------------------------------+
+2017-07-02 16:41:16,323 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:41:16,323 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:41:16,323 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:41:16,324 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:41:16,337 [main] INFO  (TorqueDataModelTask#setupControlTemplate():166) - 
+2017-07-02 16:41:16,338 [main] INFO  (TorqueDataModelTask#setupControlTemplate():167) - ...Using Java control: om/ControlGenerateJava.vm
+2017-07-02 16:41:16,360 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:41:16,444 [main] INFO  (DfAbstractTexenTask#fireVelocityProcess():253) - generator.parse("om/ControlGenerateJava.vm", ctx);
+2017-07-02 16:41:16,603 [main] INFO  (Database#doEnableGenerateOutputDirectory():1148) - ...Setting up generateOutputDirectory: ../src/main/java
+2017-07-02 16:41:16,606 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():62) - /=======================================
+2017-07-02 16:41:16,606 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():63) - ...Initializing additional primary keys.
+2017-07-02 16:41:16,607 [main] INFO  (DfAdditionalPrimaryKeyInitializer#initializeAdditionalPrimaryKey():88) - ==========/
+2017-07-02 16:41:16,608 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():62) - /=======================================
+2017-07-02 16:41:16,608 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():63) - ...Initializing additional unique keys.
+2017-07-02 16:41:16,609 [main] INFO  (DfAdditionalUniqueKeyInitializer#initializeAdditionalUniqueKey():83) - ==========/
+2017-07-02 16:41:16,612 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():68) - /=======================================
+2017-07-02 16:41:16,612 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():69) - ...Initializing additional foreign keys.
+2017-07-02 16:41:16,613 [main] INFO  (DfAdditionalForeignKeyInitializer#initializeAdditionalForeignKey():88) - ==========/
+2017-07-02 16:41:16,624 [main] INFO  (DfIncludeQueryInitializer#initializeIncludeQuery():58) - /=============================
+2017-07-02 16:41:16,625 [main] INFO  (DfIncludeQueryInitializer#initializeIncludeQuery():59) - ...Initializing include query.
+2017-07-02 16:41:16,625 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - String
+2017-07-02 16:41:16,625 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - Number
+2017-07-02 16:41:16,626 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - Date
+2017-07-02 16:41:16,626 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():86) -   NotEqual -> []
+2017-07-02 16:41:16,626 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():86) -   InScope -> []
+2017-07-02 16:41:16,627 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():86) -   NotInScope -> []
+2017-07-02 16:41:16,627 [main] INFO  (DfIncludeQueryInitializer#checkQueryMap():81) - OrderBy
+2017-07-02 16:41:16,627 [main] INFO  (DfIncludeQueryInitializer#initializeIncludeQuery():61) - ========/
+2017-07-02 16:41:16,640 [main] INFO  (Database#info():2718) - public void parseAllCommon() {
+2017-07-02 16:41:16,642 [main] INFO  (Database#info():2718) -     parse('CDef');
+2017-07-02 16:41:16,693 [main] INFO  (Database#info():2718) -     parse('DBCurrent');
+2017-07-02 16:41:16,699 [main] INFO  (Database#info():2718) -     parse('DBFluteConfig');
+2017-07-02 16:41:16,725 [main] INFO  (Database#info():2718) -     parse('DBFluteInitializer');
+2017-07-02 16:41:16,732 [main] INFO  (Database#info():2718) -     parse('DBMetaInstanceHandler');
+2017-07-02 16:41:16,748 [main] INFO  (Database#info():2718) -     parse('EntityDefinedCommonColumn');
+2017-07-02 16:41:16,764 [main] INFO  (Database#info():2718) -     parse('ImplementedBehaviorSelector');
+2017-07-02 16:41:16,774 [main] INFO  (Database#info():2718) -     parse('ImplementedCommonColumnAutoSetupper');
+2017-07-02 16:41:16,787 [main] INFO  (Database#info():2718) -     parse('ImplementedInvokerAssistant');
+2017-07-02 16:41:16,799 [main] INFO  (Database#info():2718) -     parse('ImplementedSqlClauseCreator');
+2017-07-02 16:41:16,802 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:41:16,803 [main] INFO  (Database#info():2718) - public void parseContainerConfig() {
+2017-07-02 16:41:16,803 [main] INFO  (Database#info():2718) -     parse('com/demo/dbflute/allcommon/DBFluteBeansJavaConfig.java')
+2017-07-02 16:41:16,815 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:41:16,825 [main] INFO  (DfOldClassHandler#info():1045) - public void deleteOldTableClass() {
+2017-07-02 16:41:16,843 [main] INFO  (DfOldClassHandler#info():1045) - }
+2017-07-02 16:41:16,844 [main] INFO  (Database#info():2718) - public void parseTableClass() {
+2017-07-02 16:41:16,845 [main] INFO  (Database#info():2718) -     parse('account');
+2017-07-02 16:41:17,127 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:41:17,127 [main] INFO  (Database#info():2718) -  
+2017-07-02 16:41:17,145 [main] INFO  (DfRefreshResourceProcess#show():299) - /===========================================================================
+2017-07-02 16:41:17,145 [main] INFO  (DfRefreshResourceProcess#show():299) - ...Refreshing [demoApp] by http://localhost:8386/
+2017-07-02 16:41:17,148 [main] INFO  (DfRefreshResourceProcess#show():299) - ==========/
+2017-07-02 16:41:17,153 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s866ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {Generate}
+2017-07-02 16:41:19,557 [main] INFO  (DfOutsideSqlTestTask#begin():77) - +------------------------------------------+
+2017-07-02 16:41:19,559 [main] INFO  (DfOutsideSqlTestTask#begin():78) - |                                          |
+2017-07-02 16:41:19,559 [main] INFO  (DfOutsideSqlTestTask#begin():79) - |              OutsideSqlTest              |
+2017-07-02 16:41:19,559 [main] INFO  (DfOutsideSqlTestTask#begin():80) - |                                          |
+2017-07-02 16:41:19,559 [main] INFO  (DfOutsideSqlTestTask#begin():81) - +------------------------------------------+
+2017-07-02 16:41:19,701 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:41:19,701 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:41:19,701 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:41:19,701 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:41:19,820 [main] INFO  (DfSqlFileFireMan#fire():89) - {Fired SQL}: success=0 failure=0 (in 0 files)
+2017-07-02 16:41:19,875 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s288ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+ {Checked SQL}
+_/_/_/_/_/_/_/_/_/_/ {OutsideSqlTest}
+2017-07-02 16:41:20,785 [main] INFO  (DfSql2EntityTask#begin():106) - +------------------------------------------+
+2017-07-02 16:41:20,786 [main] INFO  (DfSql2EntityTask#begin():107) - |                                          |
+2017-07-02 16:41:20,787 [main] INFO  (DfSql2EntityTask#begin():108) - |                Sql2Entity                |
+2017-07-02 16:41:20,787 [main] INFO  (DfSql2EntityTask#begin():109) - |                                          |
+2017-07-02 16:41:20,787 [main] INFO  (DfSql2EntityTask#begin():110) - +------------------------------------------+
+2017-07-02 16:41:20,800 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2017-07-02 16:41:20,800 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2017-07-02 16:41:20,800 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+2017-07-02 16:41:20,800 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = root
+2017-07-02 16:41:20,810 [main] INFO  (DfSql2EntityTask#setupControlTemplate():177) - 
+2017-07-02 16:41:20,810 [main] INFO  (DfSql2EntityTask#setupControlTemplate():178) - ...Using Java control: om/ControlSql2EntityJava.vm
+2017-07-02 16:41:20,815 [main] INFO  (DTDResolver#resolveEntity():195) - ...Resolving XML by database.dtd in same package
+2017-07-02 16:41:20,863 [main] INFO  (DfSqlFileFireMan#fire():89) - {Fired SQL}: success=0 failure=0 (in 0 files)
+2017-07-02 16:41:20,886 [main] INFO  (DfSql2EntityTask#initControlContext():311) - 
+2017-07-02 16:41:20,887 [main] INFO  (DfSql2EntityTask#initControlContext():312) - ...Preparing generation of customize-entities and parameter-beans
+2017-07-02 16:41:20,887 [main] INFO  (DfSql2EntityTask#initControlContext():313) - * * * * * * * * * *
+2017-07-02 16:41:20,887 [main] INFO  (DfSql2EntityTask#initControlContext():314) - * CustomizeEntity *
+2017-07-02 16:41:20,887 [main] INFO  (DfSql2EntityTask#initControlContext():315) - * * * * * * * * * *
+2017-07-02 16:41:20,888 [main] INFO  (DfSql2EntityTask#showParameterBean():932) - * * * * * * * * *
+2017-07-02 16:41:20,888 [main] INFO  (DfSql2EntityTask#showParameterBean():933) - * ParameterBean *
+2017-07-02 16:41:20,888 [main] INFO  (DfSql2EntityTask#showParameterBean():934) - * * * * * * * * *
+2017-07-02 16:41:20,890 [main] INFO  (DfAbstractTexenTask#fireVelocityProcess():253) - generator.parse("om/ControlSql2EntityJava.vm", ctx);
+2017-07-02 16:41:21,022 [main] INFO  (Database#doEnableSql2EntityOutputDirectory():1164) - ...Setting up sql2EntityOutputDirectory: ../src/main/java
+2017-07-02 16:41:21,024 [main] INFO  (DfOldClassHandler#info():1045) - public void deleteOldCustomizeClass() {
+2017-07-02 16:41:21,031 [main] INFO  (DfOldClassHandler#info():1045) - }
+2017-07-02 16:41:21,031 [main] INFO  (Database#info():2718) - public void parseCustomizeEntity() {
+2017-07-02 16:41:21,033 [main] INFO  (Database#info():2718) - }
+2017-07-02 16:41:21,041 [main] INFO  (DfSql2EntityTask#showTargetSqlFileInformation():303) - 
+/- - - - - - - - - - - - - - - - - - - - - - - -
+Target SQL files: 0
+
+- - - - - - - - - -/
+2017-07-02 16:41:21,047 [main] INFO  (DfRefreshResourceProcess#show():299) - /===========================================================================
+2017-07-02 16:41:21,047 [main] INFO  (DfRefreshResourceProcess#show():299) - ...Refreshing [demoApp] by http://localhost:8386/
+2017-07-02 16:41:21,049 [main] INFO  (DfRefreshResourceProcess#show():299) - ==========/
+2017-07-02 16:41:21,052 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m00s277ms
+
+  DBFLUTE_CLIENT: {demodb}
+    database  = mysql
+    language  = java
+    container = spring
+    package   = com.demo.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/demodb?characterEncoding=UTF-8
+    schema = {demodb.$$NoNameSchema$$ as main}
+    user   = root
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+_/_/_/_/_/_/_/_/_/_/ {Sql2Entity}
